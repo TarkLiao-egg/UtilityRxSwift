@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="TransactionCDB" representedClassName="TransactionCDB" syncable="YES" codeGenerationType="class">
+        <attribute name="descriptionStr" attributeType="String"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="time" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="details" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TransactionDetailCDB" inverseName="parent" inverseEntity="TransactionDetailCDB"/>
+    </entity>
+    <entity name="TransactionDetailCDB" representedClassName="TransactionDetailCDB" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TransactionCDB" inverseName="details" inverseEntity="TransactionCDB"/>
+    </entity>
+    <elements>
+        <element name="TransactionCDB" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="TransactionDetailCDB" positionX="-54" positionY="-9" width="128" height="104"/>
+    </elements>
+</model>

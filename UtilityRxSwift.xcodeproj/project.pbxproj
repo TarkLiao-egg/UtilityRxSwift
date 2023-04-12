@@ -24,6 +24,8 @@
 		8227ADA229E6A5AC004CDAAC /* TransactionDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227AD9F29E6A5AC004CDAAC /* TransactionDB.swift */; };
 		8227ADA529E6A629004CDAAC /* DataDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227ADA329E6A629004CDAAC /* DataDB.swift */; };
 		8227ADA629E6A629004CDAAC /* SQLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227ADA429E6A629004CDAAC /* SQLModel.swift */; };
+		8227ADA829E6A955004CDAAC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227ADA729E6A955004CDAAC /* CoreDataManager.swift */; };
+		8227ADAB29E6A9B7004CDAAC /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8227ADA929E6A9B7004CDAAC /* CoreDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		8227AD9F29E6A5AC004CDAAC /* TransactionDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDB.swift; sourceTree = "<group>"; };
 		8227ADA329E6A629004CDAAC /* DataDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDB.swift; sourceTree = "<group>"; };
 		8227ADA429E6A629004CDAAC /* SQLModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLModel.swift; sourceTree = "<group>"; };
+		8227ADA729E6A955004CDAAC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8227ADAA29E6A9B7004CDAAC /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		8666C2038CE8ACD88A461864 /* Pods_UtilityRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UtilityRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A25093306EA9EA764FCDEF2 /* Pods-UtilityRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UtilityRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-UtilityRxSwift/Pods-UtilityRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,9 +108,11 @@
 				8227AD9E29E6A5AC004CDAAC /* RequestResponseModel.swift */,
 				8227AD9F29E6A5AC004CDAAC /* TransactionDB.swift */,
 				8227AD9D29E6A5AC004CDAAC /* TransactionDetailDB.swift */,
+				8227AD9629E6A4D4004CDAAC /* FMDBController.swift */,
 				8227AD9229E6A419004CDAAC /* FMDBManager.swift */,
 				8227AD9429E6A453004CDAAC /* APIManager.swift */,
-				8227AD9629E6A4D4004CDAAC /* FMDBController.swift */,
+				8227ADA729E6A955004CDAAC /* CoreDataManager.swift */,
+				8227ADA929E6A9B7004CDAAC /* CoreDataModel.xcdatamodeld */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -264,7 +270,9 @@
 				8227AD9529E6A453004CDAAC /* APIManager.swift in Sources */,
 				8227AD7E29E6A20A004CDAAC /* AppDelegate.swift in Sources */,
 				8227AD8029E6A20A004CDAAC /* SceneDelegate.swift in Sources */,
+				8227ADA829E6A955004CDAAC /* CoreDataManager.swift in Sources */,
 				8227ADA529E6A629004CDAAC /* DataDB.swift in Sources */,
+				8227ADAB29E6A9B7004CDAAC /* CoreDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +500,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8227ADA929E6A9B7004CDAAC /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8227ADAA29E6A9B7004CDAAC /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 8227ADAA29E6A9B7004CDAAC /* CoreData.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8227AD7229E6A20A004CDAAC /* Project object */;
 }

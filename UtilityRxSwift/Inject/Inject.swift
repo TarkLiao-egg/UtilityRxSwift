@@ -9,3 +9,10 @@ public struct Inject<T> {
 
     public init() {}
 }
+
+
+extension Array {
+    subscript(safe index: Int) -> Element? {
+        self.indices.contains(index) ? self[index] : nil
+    }
+}

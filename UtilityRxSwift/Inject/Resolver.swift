@@ -9,7 +9,7 @@ class Resolver {
         self.factories = [String: Any]()
         self.add(type: APIManager.self, APIManager.sharedInstance)
         self.add(type: FMDBManager.self, FMDBManager.sharedInstance)
-//        self.add(type: CoreDataManager.self, CoreDataManager.sharedInstance)
+        self.add(type: CoreDataManager.self, CoreDataManager.sharedInstance)
     }
 
     func add<T>(type: T.Type, _ factory: T) {
